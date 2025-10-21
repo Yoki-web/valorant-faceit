@@ -18,6 +18,14 @@ model User {
   image         String?
   accounts      Account[]
   sessions      Session[]
+
+  // 🔥 Новые поля для профиля
+  rating        Int       @default(1000) // стартовый рейтинг
+  wins          Int       @default(0)    // количество побед
+  losses        Int       @default(0)    // количество поражений
+  bio           String?                // описание профиля
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt @default(now())
 }
 
 model Account {
