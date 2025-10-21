@@ -3,7 +3,7 @@
  * Главная страница (App Router).
  * Содержит лого, кнопку "Играть сейчас" и три блока.
  */
-import Layout from "../components/Layout";
+import Layout from "./layout";
 import Link from "next/link";
 
 export default function HomePage() {

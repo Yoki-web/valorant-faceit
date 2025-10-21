@@ -19,19 +19,25 @@
     "jsx": "preserve",
     "incremental": true,
     "types": [
-      "node"
+      "node",
+      "next-auth"          // 🔹 добавлено
     ],
     "plugins": [
       {
         "name": "next"
       }
-    ]
+    ],
+    "baseUrl": ".",                
+    "paths": {                     
+      "@/*": ["src/*"]
+    }
   },
   "include": [
     "**/*.ts",
     "**/*.tsx",
     "next-env.d.ts",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
+    "src/types/**/*.d.ts"   // 🔹 добавлено, чтобы видеть кастомные типы
   ],
   "exclude": [
     "node_modules"

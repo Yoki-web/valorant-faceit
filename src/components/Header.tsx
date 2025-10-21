@@ -1,9 +1,10 @@
 /**
  * Header.tsx
- * Верхняя панель навигации: ссылки + кнопка входа.
+ * Верхняя панель навигации: ссылки + кнопка входа/выхода.
  * Используется в Layout.
  */
 import Link from "next/link";
+import AuthButton from "./AuthButton"; // импортируем кнопку авторизации
 
 export default function Header() {
   return (
@@ -22,13 +23,8 @@ export default function Header() {
           <Link href="/leaders">Рейтинг</Link>
         </nav>
 
-        {/* Кнопка входа */}
-        <Link
-          href="/register"
-          className="rounded-lg bg-red-600 px-3 py-2 text-sm font-semibold hover:bg-red-500"
-        >
-          Войти / Регистрация
-        </Link>
+        {/* Кнопка входа/выхода через Google */}
+        <AuthButton />
       </div>
     </header>
   );
